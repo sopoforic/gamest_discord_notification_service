@@ -15,4 +15,12 @@ setup(
     install_requires=['gamest', 'requests'],
     setup_requires=['setuptools_scm'],
     use_scm_version=True,
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Environment :: Win32 (MS Windows)",
+        "Intended Audience :: End Users/Desktop",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Programming Language :: Python :: 3",
+        "Topic :: Games/Entertainment",
+    ],
 )
