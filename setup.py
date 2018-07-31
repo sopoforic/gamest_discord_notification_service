@@ -12,7 +12,7 @@ setup(
     author="Tracy Poff",
     author_email="tracy.poff@gmail.com",
     packages=['gamest_plugins.discord_notification_service'],
-    install_requires=['gamest', 'requests'],
+    install_requires=['gamest >=2.0, <3.0', 'requests'],
     setup_requires=['setuptools_scm'],
     use_scm_version=True,
     classifiers=[
