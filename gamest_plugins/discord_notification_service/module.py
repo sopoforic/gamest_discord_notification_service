@@ -16,7 +16,7 @@ class DiscordNotificationService(NotificationService):
 
     @property
     def webhooks(self):
-        return self.config.get('webhooks', fallback=None)
+        return self.config.getlist('webhooks')
 
     @property
     def user_name(self):
