@@ -69,8 +69,8 @@ class DiscordNotificationService(NotificationService):
         self.logger.debug("Notify called.")
         data = { 'content' : msg.format(user_name=self.user_name_for_messages) }
         for url in self.webhooks:
-            r = requests.post(url, data=data)
-        try:
-            r.raise_for_status()
-        except:
-            self.logger.exception("Failed to send Discord notification.")
+            try:
+                r = requests.post(url, data=data)
+                r.raise_for_status()
+            except:
+                self.logger.exception("Failed to send Discord notification.")
